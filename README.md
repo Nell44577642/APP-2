@@ -27,27 +27,27 @@ python main.py
 main.py: Starts the program, creates the auction, and runs the simulation.
 logic/: Contains the main logic of the project:
 
-A Binary Search Tree (BST) to store bids
-Insertion of bids (with multiple players per price)
-In-order traversal to get sorted prices
-Function to find the lowest unique bid (winner)
-Cost calculation using the formula with base_cost and alpha
+A Binary Search Tree (BST) to store bids,
+Insertion of bids (with multiple players per price),
+In-order traversal to get sorted prices,
+Function to find the lowest unique bid (winner),
+Cost calculation using the formula with base_cost and alpha,
 ui/: Uses tkinter to allow users to interact with the system (place bids, see results).
 utils/: Contains helper functions and constants (for example base_cost and alpha).
 ## 🧪 Testing & Validation
 To verify that the program works correctly:
 
-Run the application and place several bids
-Check that bids are stored correctly in the tree
-Verify that prices are sorted (in-order traversal)
-Ensure that the winner is the lowest unique bid
-Confirm that each bid increases the total revenue
+Run the application and place several bids,
+Check that bids are stored correctly in the tree,
+Verify that prices are sorted (in-order traversal),
+Ensure that the winner is the lowest unique bid,
+Confirm that each bid increases the total revenue.
 
 Happy Path: 
 
-Several players place bids
-At least one price is unique
-The system correctly returns the winner and total revenue
+Several players place bids,
+At least one price is unique,
+The system correctly returns the winner and total revenue.
 
 ## 📦 Dependencies
 tkinter: used to create the graphical interface
