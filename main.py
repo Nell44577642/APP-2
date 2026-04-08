@@ -56,7 +56,7 @@ class BST:
                 return price, players[0]
         return None, None
 
-class Auction:
+class Auction:   # install the auction logic 
 
     def __init__(self, base_cost=1, alpha=10):
         self.tree = BST()
