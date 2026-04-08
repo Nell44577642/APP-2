@@ -23,21 +23,16 @@ class BST:
         self.root = self._insert(self.root, price, player)
 
     def _insert(self, node, price, player):
-
         if node is None:
             node = Node(price)
             node.players.append(player)
             return node
-
         if price < node.price:
             node.left = self._insert(node.left, price, player)
-
         elif price > node.price:
             node.right = self._insert(node.right, price, player)
-
         else:
             node.players.append(player)
-
         return node
 
 
@@ -48,29 +43,23 @@ class BST:
 
 
     def _inorder(self, node, result):
-
         if node is None:
             return
-
         self._inorder(node.left, result)
         result.append((node.price, node.players))
         self._inorder(node.right, result)
 
 
     def lowest_unique(self):
-
         result = self.inorder()
-
         for price, players in result:
             if len(players) == 1:
                 return price, players[0]
-
         return None, None
 
 class Auction:
 
     def __init__(self, base_cost=1, alpha=10):
-
         self.tree = BST()
         self.base_cost = base_cost
         self.alpha = alpha
@@ -79,58 +68,43 @@ class Auction:
 
 
     def bid_cost(self, price):
-
         return self.base_cost + self.alpha/(price+1)
 
 
     def place_bid(self, player, price):
-
         self.tree.insert(price, player)
-
         cost = self.bid_cost(price)
-
         self.revenue += cost
         self.total_bids += 1
 
 
   def winner(self):
-
         return self.tree.  lowest_unique()
 
 class AuctionGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("Lowest Unique Bid Auction")
-
         self.auction = Auction()
-
         main = ttk.Frame(root)
         main.pack(padx=10, pady=10)
-
         self.frame_input = ttk.LabelFrame(main, text="Place Bid")
         self.frame_input.grid(row=0, column=0, padx=10)
-
         self.frame_display = ttk.LabelFrame(main, text="Auction State")
         self.frame_display.grid(row=0, column=1)
-
         self.frame_controls = ttk.LabelFrame(main, text="Controls")
         self.frame_controls.grid(row=1, column=0, columnspan=2, pady=10)
-
         self.build_input()
         self.build_display()
         self.build_controls()
 
     def build_input(self):
         ttk.Label(self.frame_input, text="Player").grid(row=0, column=0)
-
         self.player_entry = ttk.Entry(self.frame_input)
         self.player_entry.grid(row=0, column=1)
-
         ttk.Label(self.frame_input, text="Price").grid(row=1, column=0)
-
         self.price_entry = ttk.Entry(self.frame_input)
         self.price_entry.grid(row=1, column=1)
-
         ttk.Button(
             self.frame_input,
             text="Place Bid",
