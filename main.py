@@ -66,3 +66,35 @@ class BST:
                 return price, players[0]
 
         return None, None
+
+class Auction:
+
+    def __init__(self, base_cost=1, alpha=10):
+
+        self.tree = BST()
+        self.base_cost = base_cost
+        self.alpha = alpha
+        self.revenue = 0
+        self.total_bids = 0
+
+
+    def bid_cost(self, price):
+
+        return self.base_cost + self.alpha/(price+1)
+
+
+    def place_bid(self, player, price):
+
+        self.tree.insert(price, player)
+
+        cost = self.bid_cost(price)
+
+        self.revenue += cost
+        self.total_bids += 1
+
+
+  def winner(self):
+
+        return self.tree.  lowest_unique()
+
+
