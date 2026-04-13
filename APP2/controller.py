@@ -19,10 +19,29 @@ class AuctionController:
     def add_bots(self):
         # Some variety of bot behaviors
         bots = ["Aggressive_Bot", "Safe_Bot", "Random_Bot", "Cheap_Bot"]
-        for b in bots:
-            # Each bot picks a random number between 0 and 20
-            p = random.randint(0, 20)
-            self.tree.insert(p, b)
+         # Aggressive_Bot: bids high prices to win
+        if bots == "Agressive_Bot":
+            p = random.randint(15, 25)
+            self.tree.insert(p, "Aggressive_Bot")
+        
+        # Safe_Bot: bids conservatively, lower prices
+        elif bots == "Safe_Bot":
+            p = random.randint(2, 8)
+            self.tree.insert(p, "Safe_Bot")
+        
+        # Random_Bot: completely unpredictable
+        elif bots == "Random_Bot":
+            p= random.randint(0, 30)
+            self.tree.insert(p, "Random_Bot")
+        
+        # Cheap_Bot: always tries the lowest price possible
+        elif bots == "Cheap_Bot":
+            p = random.randint(0, 3)
+            self.tree.insert(p, "Cheap_Bot")
+
+        else:
+            return None
+            
         self.view.update_log("Added 4 AI competitors to the tree.")
 
     def show_results(self):
