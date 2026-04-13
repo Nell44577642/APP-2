@@ -152,9 +152,6 @@ The BST is used to:
 - Avoid using Python sorting (project requirement)  
 - Efficiently find the lowest unique bid  
 
-⚠️ Limitation:
-- The BST can become inefficient if it becomes **unbalanced**  
-
 ---
 
 ##  Testing & Validation  
@@ -182,9 +179,7 @@ Check that:
 
 ##  Future Improvements (v2.0)
 
-- Improve bot behavior (fix logic and add strategies)  
-- Add multi-round simulations  
-- Implement a balanced BST  
+- Improve bot behavior  
 - Add statistics (win rate, average cost, revenue analysis)  
 - Improve user interface  
 
