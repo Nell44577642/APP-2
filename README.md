@@ -175,7 +175,7 @@ Check that:
 - Improve bot behavior  
 - Add statistics (win rate, average cost, revenue analysis)  
 - Improve user interface  
-
+- Run it 500 times 
 ---
 
 ##  How to Use  
