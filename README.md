@@ -26,13 +26,6 @@ Clone the repository:
 git clone [your-repo-link]
 cd [project-folder]
 
-Setup Virtual Environment:
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-
-Install Dependencies:
-pip install -r requirements.txt
-
 Run Application:
 python main.py
 
