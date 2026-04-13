@@ -5,7 +5,7 @@ Group Members: Bultez Charlotte, Ito-Russo Kana, Raux Lily & Ribeiro Nell
 
 ---
 
-## 🎯 Project Overview  
+##  Project Overview  
 Our application simulates an auction system called **“Lowest Unique Bid Wins”**.  
 
 In this system, the winner is the player who places the **lowest bid that is unique** (no other player chose the same price).  
@@ -19,7 +19,7 @@ This project combines **algorithmic design (Binary Search Tree)** and **economic
 
 ---
 
-## 🚀 Quick Start ( < 60s Setup )
+##  Quick Start 
 
 Clone the repository:
 
@@ -41,7 +41,7 @@ python main.py
 
 ---
 
-## 🛠️ Technical Architecture  
+##  Technical Architecture  
 
 The project follows an **MVC (Model - View - Controller)** structure.
 
@@ -88,7 +88,7 @@ Features:
 
 ---
 
-## 💰 Cost Formula  
+##  Cost Formula  
 
 Each bid has a cost defined by:
 
@@ -107,7 +107,7 @@ In our implementation:
 
 ---
 
-## 🏆 Winner Rule  
+##  Winner Rule  
 
 The winner is:
 > the player who placed the **lowest unique bid**
@@ -121,7 +121,7 @@ If all bids are duplicated:
 
 ---
 
-## 🤖 AI Players  
+##  AI Players  
 
 The system includes several bot strategies:
 - **Aggressive Bot** → bids high values  
@@ -133,7 +133,7 @@ These bots simulate different player behaviors and make the game more dynamic.
 
 ---
 
-## 💵 Revenue Model  
+##  Revenue Model  
 
 The startup earns money from **every bid placed**, not only the winning one.
 
@@ -145,7 +145,7 @@ This creates a **game effect**:
 
 ---
 
-## 🌳 Why a Binary Search Tree?  
+##  Why a Binary Search Tree?  
 
 The BST is used to:
 - Keep bids **sorted automatically**  
@@ -157,7 +157,7 @@ The BST is used to:
 
 ---
 
-## 🧪 Testing & Validation  
+##  Testing & Validation  
 
 To test the program:
 
@@ -180,7 +180,7 @@ Check that:
 
 ---
 
-## 🔮 Future Improvements (v2.0)
+##  Future Improvements (v2.0)
 
 - Improve bot behavior (fix logic and add strategies)  
 - Add multi-round simulations  
@@ -190,7 +190,7 @@ Check that:
 
 ---
 
-## 🎮 How to Use  
+##  How to Use  
 
 1. Enter your name and a bid  
 2. Click **“Bid!”**  
